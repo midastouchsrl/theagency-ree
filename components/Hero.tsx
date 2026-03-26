@@ -24,8 +24,8 @@ export default function Hero() {
         className="absolute inset-0 transition-colors duration-500"
         style={{
           background: isDark
-            ? "linear-gradient(to bottom, rgba(20,20,20,0.45) 0%, rgba(20,20,20,0.6) 50%, rgba(20,20,20,0.75) 100%)"
-            : "linear-gradient(to bottom, rgba(240,236,229,0.35) 0%, rgba(240,236,229,0.55) 50%, rgba(240,236,229,0.72) 100%)",
+            ? "linear-gradient(to bottom, rgba(20,20,20,0.55) 0%, rgba(20,20,20,0.7) 50%, rgba(20,20,20,0.82) 100%)"
+            : "linear-gradient(to bottom, rgba(240,236,229,0.5) 0%, rgba(240,236,229,0.65) 50%, rgba(240,236,229,0.8) 100%)",
         }}
       />
 
