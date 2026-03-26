@@ -25,7 +25,7 @@ export default function Hero() {
         style={{
           background: isDark
             ? "linear-gradient(to bottom, rgba(20,20,20,0.55) 0%, rgba(20,20,20,0.7) 50%, rgba(20,20,20,0.82) 100%)"
-            : "linear-gradient(to bottom, rgba(255,255,253,0.62) 0%, rgba(255,255,253,0.78) 50%, rgba(255,255,253,0.92) 100%)",
+            : "linear-gradient(to bottom, rgba(255,255,253,0.72) 0%, rgba(255,255,253,0.85) 50%, rgba(255,255,253,0.95) 100%)",
         }}
       />
 
