@@ -36,7 +36,8 @@ export default function PrivacyPolicy() {
             (impresa individuale), con nome commerciale <strong>The Agency REE</strong>.
           </p>
           <ul>
-            <li>Sede: Via di Villa Emiliani 34, 00197 Roma (RM)</li>
+            <li>Sede legale: Via Fano 3, 00054 Fiumicino (RM), Fraz. Fregene</li>
+            <li>Sede operativa: Via di Villa Emiliani 34, 00197 Roma (RM)</li>
             <li>P.IVA: 11245791006</li>
             <li>REA: RM - 1289409</li>
             <li>PEC: dnssfn75r21h501y@impresa.italia.it</li>

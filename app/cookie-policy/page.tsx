@@ -132,7 +132,9 @@ export default function CookiePolicy() {
             <br />
             Nome commerciale: The Agency REE
             <br />
-            Sede: Via di Villa Emiliani 34, 00197 Roma (RM)
+            Sede legale: Via Fano 3, 00054 Fiumicino (RM)
+            <br />
+            Sede operativa: Via di Villa Emiliani 34, 00197 Roma (RM)
             <br />
             P.IVA: 11245791006
             <br />
