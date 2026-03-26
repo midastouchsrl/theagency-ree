@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-urban-shadow">
+    <footer className="bg-urban-shadow dark:bg-dark-base">
       {/* Top gold line */}
       <div className="h-[1px] bg-gradient-to-r from-transparent via-champagne to-transparent opacity-40" />
 
@@ -14,14 +14,14 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Image
-              src="/logo-white.png"
+              src="/logo-light.png"
               alt="The Agency REE"
               width={160}
               height={56}
               className="mb-6 h-12 w-auto object-contain"
             />
             <p className="text-sm leading-relaxed text-warm-white/50">
-              Real Estate Experts nel cuore dei Parioli. Soluzioni immobiliari
+              Real Estate Experts nel cuore di Roma. Soluzioni immobiliari
               su misura con competenza e trasparenza.
             </p>
           </div>
@@ -129,7 +129,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 border-t border-warm-white/10 pt-8 flex flex-col items-center gap-4 md:flex-row md:justify-between">
+        <div className="mt-16 flex flex-col items-center gap-4 border-t border-warm-white/10 pt-8 md:flex-row md:justify-between">
           <p className="text-xs text-warm-white/30">
             &copy; {currentYear} The Agency REE - Real Estate Experts. Tutti i
             diritti riservati.

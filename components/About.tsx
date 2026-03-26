@@ -2,7 +2,10 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function About() {
   return (
-    <section id="chi-siamo" className="relative overflow-hidden bg-cream py-24 lg:py-32">
+    <section
+      id="chi-siamo"
+      className="relative overflow-hidden bg-cream py-24 dark:bg-dark-surface lg:py-32"
+    >
       {/* Decorative corner */}
       <div className="absolute right-0 top-0 h-32 w-32 opacity-[0.04]">
         <div className="h-full w-full border-r-2 border-t-2 border-champagne" />
@@ -15,7 +18,7 @@ export default function About() {
             <span className="mb-4 text-[11px] font-medium uppercase tracking-[0.4em] text-champagne">
               La Nostra Storia
             </span>
-            <h2 className="text-3xl font-light tracking-wide text-urban-shadow sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-light tracking-wide text-urban-shadow dark:text-light-text sm:text-4xl lg:text-5xl">
               Chi Siamo
             </h2>
             <div className="mt-6 h-[1px] w-16 bg-champagne" />
@@ -26,18 +29,18 @@ export default function About() {
           {/* Left: Statement */}
           <ScrollReveal delay={1}>
             <div className="flex flex-col justify-center">
-              <p className="mb-8 text-xl font-light leading-relaxed text-urban-shadow sm:text-2xl lg:text-3xl">
+              <p className="mb-8 text-xl font-light leading-relaxed text-urban-shadow dark:text-light-text sm:text-2xl lg:text-3xl">
                 Assistenza immobiliare{" "}
                 <span className="text-champagne">d&apos;eccellenza</span>
               </p>
-              <p className="mb-6 text-base leading-relaxed text-stone">
+              <p className="mb-6 text-base leading-relaxed text-stone dark:text-light-muted">
                 Con sede nel cuore di Roma, THE AGENCY REE mette al servizio dei
                 propri clienti esperienza e professionalità per un&apos;assistenza
                 immobiliare d&apos;eccellenza. Accompagniamo ogni cliente con
                 dedizione in tutte le fasi della trattativa, fino alla piena
                 soddisfazione.
               </p>
-              <p className="text-base leading-relaxed text-stone">
+              <p className="text-base leading-relaxed text-stone dark:text-light-muted">
                 Siamo specializzati in compravendite, locazioni, permute e
                 valutazioni di mercato, trattando immobili residenziali e
                 commerciali: appartamenti, ville, negozi e attività.
@@ -51,9 +54,9 @@ export default function About() {
               {/* Unique trait card */}
               <div className="mb-10 border-l-2 border-champagne pl-8">
                 <p className="mb-2 text-[11px] font-medium uppercase tracking-[0.3em] text-champagne">
-                  Cosa Ci Rende Unici
+                  La Nostra Filosofia
                 </p>
-                <p className="text-lg font-light leading-relaxed text-urban-shadow">
+                <p className="text-lg font-light leading-relaxed text-urban-shadow dark:text-light-text">
                   Acquistare o vendere casa è uno dei momenti più significativi
                   della vita. Ne siamo profondamente consapevoli: per questo
                   offriamo un servizio fondato su{" "}
@@ -64,7 +67,7 @@ export default function About() {
                 </p>
               </div>
 
-              <p className="mb-8 text-base leading-relaxed text-stone">
+              <p className="mb-8 text-base leading-relaxed text-stone dark:text-light-muted">
                 Offriamo inoltre servizi di consulenza tecnica, notarile e
                 finanziaria, oltre a supporto post-vendita, collaborando con
                 professionisti qualificati per valorizzare al meglio ogni immobile.
@@ -82,7 +85,7 @@ export default function About() {
                 ].map((item) => (
                   <div
                     key={item}
-                    className="flex items-center gap-3 text-sm text-urban-shadow"
+                    className="flex items-center gap-3 text-sm text-urban-shadow dark:text-light-text"
                   >
                     <div className="h-1 w-1 rounded-full bg-champagne" />
                     {item}

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-urban-shadow">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-urban-shadow dark:bg-dark-base">
       {/* Background pittogramma watermark */}
       <div className="absolute inset-0 flex items-center justify-center opacity-[0.06]">
         <Image
@@ -33,7 +33,7 @@ export default function Hero() {
 
         {/* Logo */}
         <Image
-          src="/logo-white.png"
+          src="/logo-light.png"
           alt="The Agency REE"
           width={280}
           height={96}

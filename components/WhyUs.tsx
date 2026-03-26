@@ -2,9 +2,9 @@ import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 
 const stats = [
-  { value: "Parioli", label: "Zona di Riferimento" },
+  { value: "Roma", label: "Cuore della Capitale" },
   { value: "FIAIP", label: "Membro del Consiglio" },
-  { value: "100%", label: "Team al Femminile" },
+  { value: "100%", label: "Dedizione al Cliente" },
   { value: "360°", label: "Assistenza Completa" },
 ];
 
@@ -12,7 +12,7 @@ const values = [
   {
     title: "Esperienza",
     description:
-      "Anni di presenza nel mercato immobiliare romano con una profonda conoscenza del territorio dei Parioli e delle zone limitrofe.",
+      "Una presenza consolidata nel mercato immobiliare romano, con una profonda conoscenza del territorio e delle sue dinamiche.",
   },
   {
     title: "Trasparenza",
@@ -30,7 +30,7 @@ export default function WhyUs() {
   return (
     <section
       id="perche-noi"
-      className="relative overflow-hidden bg-urban-shadow py-24 lg:py-32"
+      className="relative overflow-hidden bg-urban-shadow py-24 dark:bg-dark-elevated lg:py-32"
     >
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-[0.03]">

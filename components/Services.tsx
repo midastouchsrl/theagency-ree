@@ -65,7 +65,10 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="servizi" className="relative bg-warm-white py-24 lg:py-32">
+    <section
+      id="servizi"
+      className="relative bg-warm-white py-24 dark:bg-dark-base lg:py-32"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Section header */}
         <ScrollReveal>
@@ -73,11 +76,11 @@ export default function Services() {
             <span className="mb-4 text-[11px] font-medium uppercase tracking-[0.4em] text-champagne">
               Cosa Facciamo
             </span>
-            <h2 className="text-3xl font-light tracking-wide text-urban-shadow sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-light tracking-wide text-urban-shadow dark:text-light-text sm:text-4xl lg:text-5xl">
               I Nostri Servizi
             </h2>
             <div className="mt-6 h-[1px] w-16 bg-champagne" />
-            <p className="mx-auto mt-6 max-w-2xl text-base font-light leading-relaxed text-stone">
+            <p className="mx-auto mt-6 max-w-2xl text-base font-light leading-relaxed text-stone dark:text-light-muted">
               I nostri clienti possono contare su un servizio di alta qualità che
               li accompagna in ogni fase, dalla ricerca dell&apos;immobile fino
               alla conclusione della trattativa.
@@ -89,7 +92,7 @@ export default function Services() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => (
             <ScrollReveal key={service.title} delay={Math.min(i + 1, 5) as 1 | 2 | 3 | 4 | 5}>
-              <div className="group relative h-full border border-warm-white bg-cream p-8 transition-all duration-500 hover:border-champagne/30 hover:shadow-[0_8px_40px_-12px_rgba(189,156,114,0.15)] lg:p-10">
+              <div className="group relative h-full border border-warm-white bg-cream p-8 transition-all duration-500 hover:border-champagne/30 hover:shadow-[0_8px_40px_-12px_rgba(189,156,114,0.15)] dark:border-dark-border dark:bg-dark-surface dark:hover:border-champagne/20 lg:p-10">
                 {/* Gold corner accent */}
                 <div className="absolute right-0 top-0 h-8 w-8 border-r border-t border-champagne/0 transition-all duration-500 group-hover:border-champagne/40" />
                 <div className="absolute bottom-0 left-0 h-8 w-8 border-b border-l border-champagne/0 transition-all duration-500 group-hover:border-champagne/40" />
@@ -97,10 +100,10 @@ export default function Services() {
                 <div className="mb-6 text-champagne transition-transform duration-500 group-hover:scale-110">
                   {service.icon}
                 </div>
-                <h3 className="mb-4 text-[13px] font-medium uppercase tracking-[0.2em] text-urban-shadow">
+                <h3 className="mb-4 text-[13px] font-medium uppercase tracking-[0.2em] text-urban-shadow dark:text-light-text">
                   {service.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-stone">
+                <p className="text-sm leading-relaxed text-stone dark:text-light-muted">
                   {service.description}
                 </p>
               </div>
@@ -114,7 +117,7 @@ export default function Services() {
             <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.4em] text-champagne">
               La Nostra Rete
             </p>
-            <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-8 text-sm text-stone">
+            <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-8 text-sm text-stone dark:text-light-muted">
               {[
                 "Geometri e Architetti",
                 "Studi Notarili",

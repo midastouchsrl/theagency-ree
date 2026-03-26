@@ -38,7 +38,10 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contatti" className="relative bg-cream py-24 lg:py-32">
+    <section
+      id="contatti"
+      className="relative bg-cream py-24 dark:bg-dark-surface lg:py-32"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Section header */}
         <ScrollReveal>
@@ -46,7 +49,7 @@ export default function ContactSection() {
             <span className="mb-4 text-[11px] font-medium uppercase tracking-[0.4em] text-champagne">
               Parliamo del Tuo Progetto
             </span>
-            <h2 className="text-3xl font-light tracking-wide text-urban-shadow sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-light tracking-wide text-urban-shadow dark:text-light-text sm:text-4xl lg:text-5xl">
               Contattaci
             </h2>
             <div className="mt-6 h-[1px] w-16 bg-champagne" />
@@ -116,7 +119,7 @@ export default function ContactSection() {
                   }
                   className="mt-1 h-4 w-4 accent-champagne"
                 />
-                <span className="text-xs leading-relaxed text-stone">
+                <span className="text-xs leading-relaxed text-stone dark:text-light-muted">
                   Ho letto e accetto la{" "}
                   <a
                     href="/privacy-policy"
@@ -151,7 +154,7 @@ export default function ContactSection() {
                 </p>
               )}
               {status === "error" && (
-                <p className="text-sm text-red-600">
+                <p className="text-sm text-red-400">
                   Si è verificato un errore. Riprova o contattaci direttamente.
                 </p>
               )}
@@ -167,7 +170,7 @@ export default function ContactSection() {
                   <p className="mb-2 text-[11px] font-medium uppercase tracking-[0.3em] text-champagne">
                     Sede
                   </p>
-                  <p className="text-base leading-relaxed text-urban-shadow">
+                  <p className="text-base leading-relaxed text-urban-shadow dark:text-light-text">
                     Via di Villa Emiliani 34
                     <br />
                     Roma - Parioli
@@ -179,12 +182,12 @@ export default function ContactSection() {
                     Contatti
                   </p>
                   <div className="space-y-2">
-                    <p className="text-base text-urban-shadow">
-                      <span className="text-stone">Giorgia Cordeschi</span>
+                    <p className="text-base text-stone dark:text-light-muted">
+                      Giorgia Cordeschi
                     </p>
                     <a
                       href="mailto:info@theagencyree.it"
-                      className="block text-base text-urban-shadow transition-colors hover:text-champagne"
+                      className="block text-base text-urban-shadow transition-colors hover:text-champagne dark:text-light-text dark:hover:text-champagne"
                     >
                       info@theagencyree.it
                     </a>
@@ -192,7 +195,7 @@ export default function ContactSection() {
                       href="https://wa.me/393409120930"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block text-base text-urban-shadow transition-colors hover:text-champagne"
+                      className="block text-base text-urban-shadow transition-colors hover:text-champagne dark:text-light-text dark:hover:text-champagne"
                     >
                       +39 340 912 0930
                     </a>
@@ -207,7 +210,7 @@ export default function ContactSection() {
                     href="https://www.instagram.com/the.agencyree/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-base text-urban-shadow transition-colors hover:text-champagne"
+                    className="inline-flex items-center gap-2 text-base text-urban-shadow transition-colors hover:text-champagne dark:text-light-text dark:hover:text-champagne"
                   >
                     <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
                       <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
@@ -230,7 +233,7 @@ export default function ContactSection() {
                 </a>
               </div>
 
-              {/* Map embed placeholder */}
+              {/* Map */}
               <div className="mt-10 overflow-hidden">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.1!2d12.4752!3d41.9284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f8e5e7e7b7%3A0x0!2sVia+di+Villa+Emiliani+34%2C+Roma!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
@@ -241,7 +244,6 @@ export default function ContactSection() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="The Agency REE - Mappa"
-                  className="rounded-none"
                 />
               </div>
             </div>
