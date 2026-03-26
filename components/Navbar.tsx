@@ -16,6 +16,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const isDark = theme === "dark";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -23,43 +24,21 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleLinkClick = () => setMobileOpen(false);
-
-  // Logo logic:
-  // Over hero (not scrolled) → always light logo (hero is dark)
-  // Scrolled, light mode → dark logo (on warm-white bg)
-  // Scrolled, dark mode → light logo (on dark bg)
-  const logoSrc =
-    !scrolled || theme === "dark" ? "/logo-light.png" : "/logo-dark.png";
-
-  // Text color:
-  // Over hero → warm-white
-  // Scrolled, light mode → urban-shadow
-  // Scrolled, dark mode → warm-white/light-text
-  const textClass = scrolled
-    ? theme === "dark"
-      ? "text-light-text"
-      : "text-urban-shadow"
-    : "text-warm-white";
-
-  const hamburgerColor = scrolled
-    ? theme === "dark"
-      ? "bg-light-text"
-      : "bg-urban-shadow"
-    : "bg-warm-white";
+  // Logo: dark logo on light bg, light logo on dark bg
+  const logoSrc = isDark ? "/logo-light.png" : "/logo-dark.png";
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? theme === "dark"
-            ? "bg-dark-base/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(189,156,114,0.15)]"
-            : "bg-warm-white/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(189,156,114,0.2)]"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+      style={{
+        backgroundColor: scrolled ? "var(--bg-nav-solid)" : "transparent",
+        boxShadow: scrolled
+          ? "0 1px 0 0 rgba(189,156,114,0.2)"
+          : "none",
+        backdropFilter: scrolled ? "blur(12px)" : "none",
+      }}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
-        {/* Logo */}
         <Link href="/" className="relative z-10">
           <Image
             src={logoSrc}
@@ -77,19 +56,20 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className={`text-[13px] font-medium uppercase tracking-[0.2em] transition-colors duration-300 hover:text-champagne ${textClass}`}
+              className="text-[13px] font-medium uppercase tracking-[0.2em] transition-colors duration-300 hover:text-champagne"
+              style={{ color: "var(--text-heading)" }}
             >
               {link.label}
             </a>
           ))}
 
-          {/* Theme toggle */}
           <button
             onClick={toggleTheme}
-            className={`ml-2 flex h-8 w-8 items-center justify-center rounded-full transition-colors duration-300 hover:text-champagne ${textClass}`}
-            aria-label={theme === "dark" ? "Passa al tema chiaro" : "Passa al tema scuro"}
+            className="ml-2 flex h-8 w-8 items-center justify-center rounded-full transition-colors duration-300 hover:text-champagne"
+            style={{ color: "var(--text-heading)" }}
+            aria-label={isDark ? "Tema chiaro" : "Tema scuro"}
           >
-            {theme === "dark" ? (
+            {isDark ? (
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-4 w-4">
                 <circle cx="12" cy="12" r="5" />
                 <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
@@ -102,20 +82,15 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile: theme toggle + hamburger */}
+        {/* Mobile */}
         <div className="flex items-center gap-3 md:hidden">
           <button
             onClick={toggleTheme}
-            className={`relative z-10 flex h-8 w-8 items-center justify-center transition-colors hover:text-champagne ${
-              mobileOpen
-                ? theme === "dark"
-                  ? "text-light-text"
-                  : "text-urban-shadow"
-                : textClass
-            }`}
-            aria-label={theme === "dark" ? "Passa al tema chiaro" : "Passa al tema scuro"}
+            className="relative z-10 flex h-8 w-8 items-center justify-center transition-colors hover:text-champagne"
+            style={{ color: "var(--text-heading)" }}
+            aria-label={isDark ? "Tema chiaro" : "Tema scuro"}
           >
-            {theme === "dark" ? (
+            {isDark ? (
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-4 w-4">
                 <circle cx="12" cy="12" r="5" />
                 <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
@@ -133,18 +108,18 @@ export default function Navbar() {
             aria-label="Menu"
           >
             <span
-              className={`h-[1.5px] w-6 transition-all duration-300 ${
-                mobileOpen
-                  ? `translate-y-[3.5px] rotate-45 ${theme === "dark" ? "bg-light-text" : "bg-urban-shadow"}`
-                  : hamburgerColor
-              }`}
+              className="h-[1.5px] w-6 transition-all duration-300"
+              style={{
+                backgroundColor: "var(--text-heading)",
+                transform: mobileOpen ? "translateY(3.5px) rotate(45deg)" : "none",
+              }}
             />
             <span
-              className={`h-[1.5px] w-6 transition-all duration-300 ${
-                mobileOpen
-                  ? `-translate-y-[2.5px] -rotate-45 ${theme === "dark" ? "bg-light-text" : "bg-urban-shadow"}`
-                  : hamburgerColor
-              }`}
+              className="h-[1.5px] w-6 transition-all duration-300"
+              style={{
+                backgroundColor: "var(--text-heading)",
+                transform: mobileOpen ? "translateY(-2.5px) rotate(-45deg)" : "none",
+              }}
             />
           </button>
         </div>
@@ -153,18 +128,18 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div
         className={`fixed inset-0 transition-all duration-500 md:hidden ${
-          theme === "dark" ? "bg-dark-base" : "bg-warm-white"
-        } ${mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        style={{ backgroundColor: "var(--bg-main)" }}
       >
         <div className="flex h-full flex-col items-center justify-center gap-10">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              onClick={handleLinkClick}
-              className={`text-lg font-medium uppercase tracking-[0.25em] transition-colors hover:text-champagne ${
-                theme === "dark" ? "text-light-text" : "text-urban-shadow"
-              }`}
+              onClick={() => setMobileOpen(false)}
+              className="text-lg font-medium uppercase tracking-[0.25em] transition-colors hover:text-champagne"
+              style={{ color: "var(--text-heading)" }}
             >
               {link.label}
             </a>

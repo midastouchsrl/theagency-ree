@@ -1,66 +1,62 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
+/* ============================================
+   THEME SYSTEM - CSS Custom Properties
+   Controlled by .dark class on <html>
+   ============================================ */
 
+:root {
+  --bg-main: #F0ECE5;
+  --bg-alt: #FAF8F5;
+  --bg-card: #FAF8F5;
+  --bg-card-border: #e8e4dc;
+  --bg-nav-solid: rgba(240, 236, 229, 0.95);
+  --text-heading: #282828;
+  --text-body: #6C6361;
+  --bg-dark-section: #282828;
+  --bg-dark-elevated: #2F2F2F;
+}
+
+:root.dark {
+  --bg-main: #141414;
+  --bg-alt: #1C1C1C;
+  --bg-card: #1E1E1E;
+  --bg-card-border: #2E2E2E;
+  --bg-nav-solid: rgba(20, 20, 20, 0.95);
+  --text-heading: #E8E4DD;
+  --text-body: #8A8480;
+  --bg-dark-section: #1A1A1A;
+  --bg-dark-elevated: #222222;
+}
+
+/* Static brand tokens only */
 @theme inline {
-  /* Brand Colors */
-  --color-urban-shadow: #282828;
   --color-champagne: #BD9C72;
   --color-champagne-light: #D4BC96;
   --color-champagne-dark: #A68B5B;
   --color-stone: #6C6361;
+  --color-urban-shadow: #282828;
   --color-warm-white: #F0ECE5;
   --color-cream: #FAF8F5;
-
-  /* Dark theme surfaces */
-  --color-dark-base: #141414;
-  --color-dark-surface: #1C1C1C;
-  --color-dark-elevated: #242424;
-  --color-dark-border: #2E2E2E;
-
-  /* Text on dark */
-  --color-light-text: #E8E4DD;
-  --color-light-muted: #8A8480;
-
-  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-}
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
-/* Light theme (default) */
 body {
-  background: #F0ECE5;
-  color: #282828;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background: var(--bg-main);
+  color: var(--text-heading);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Dark theme */
-.dark body {
-  background: #141414;
-  color: #E8E4DD;
-}
+::selection { background: #BD9C72; color: #F0ECE5; }
 
-::selection {
-  background: #BD9C72;
-  color: #F0ECE5;
-}
-
-/* Scrollbar - Light */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #F0ECE5; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
 ::-webkit-scrollbar-thumb { background: #BD9C72; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #A68B5B; }
 
-/* Scrollbar - Dark */
-.dark ::-webkit-scrollbar-track { background: #141414; }
-.dark ::-webkit-scrollbar-thumb { background: #BD9C72; }
-
-/* Gold text gradient */
 .text-gold-gradient {
   background: linear-gradient(135deg, #BD9C72 0%, #D4BC96 50%, #BD9C72 100%);
   -webkit-background-clip: text;
@@ -68,77 +64,28 @@ body {
   background-clip: text;
 }
 
-/* Reveal on scroll */
 .reveal {
-  opacity: 0;
-  transform: translateY(24px);
+  opacity: 0; transform: translateY(24px);
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+.reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 .reveal-delay-5 { transition-delay: 0.5s; }
 
-/* Gold line expand */
-@keyframes lineExpand {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
-}
-.gold-line-animated {
-  animation: lineExpand 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  transform-origin: left;
-}
+@keyframes lineExpand { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.gold-line-animated { animation: lineExpand 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; transform-origin: left; }
 
-/* Scroll indicator bounce */
-@keyframes scrollBounce {
-  0%, 100% { transform: translateY(0); opacity: 1; }
-  50% { transform: translateY(8px); opacity: 0.5; }
-}
+@keyframes scrollBounce { 0%, 100% { transform: translateY(0); opacity: 1; } 50% { transform: translateY(8px); opacity: 0.5; } }
 
-/* Shimmer */
-@keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-.gold-shimmer {
-  background: linear-gradient(90deg, #BD9C72 0%, #D4BC96 25%, #BD9C72 50%, #D4BC96 75%, #BD9C72 100%);
-  background-size: 200% 100%;
-  animation: shimmer 6s ease-in-out infinite;
-}
-
-/* Premium input style */
 .input-premium {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #6C6361;
-  padding: 12px 0;
-  font-size: 1rem;
-  color: #282828;
-  transition: border-color 0.3s ease, color 0.3s ease;
-  outline: none;
-  width: 100%;
+  background: transparent; border: none;
+  border-bottom: 1px solid var(--text-body);
+  padding: 12px 0; font-size: 1rem;
+  color: var(--text-heading);
+  transition: border-color 0.3s ease; outline: none; width: 100%;
 }
-.input-premium:focus {
-  border-bottom-color: #BD9C72;
-}
-.input-premium::placeholder {
-  color: #6C6361;
-  opacity: 0.7;
-}
-
-/* Dark mode inputs */
-.dark .input-premium {
-  color: #E8E4DD;
-  border-bottom-color: #3a3a3a;
-}
-.dark .input-premium:focus {
-  border-bottom-color: #BD9C72;
-}
-.dark .input-premium::placeholder {
-  color: #6C6361;
-}
+.input-premium:focus { border-bottom-color: #BD9C72; }
+.input-premium::placeholder { color: var(--text-body); opacity: 0.7; }

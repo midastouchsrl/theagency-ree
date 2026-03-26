@@ -27,7 +27,7 @@ export default function CookieBanner() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-[60] border-t border-champagne/20 bg-urban-shadow/95 px-6 py-5 backdrop-blur-md dark:bg-dark-base/95">
+    <div className="fixed bottom-0 left-0 right-0 z-[60] border-t border-champagne/20 px-6 py-5 backdrop-blur-md" style={{ backgroundColor: "var(--bg-dark-section)", opacity: 0.97 }}>
       <div className="mx-auto flex max-w-7xl flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm leading-relaxed text-warm-white/70">
           Utilizziamo cookie tecnici per garantire il corretto funzionamento del

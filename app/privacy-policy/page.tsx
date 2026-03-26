@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <div className="bg-cream pt-28 pb-20 dark:bg-dark-surface">
+    <div className="pt-28 pb-20" style={{ backgroundColor: "var(--bg-alt)" }}>
       <article className="mx-auto max-w-3xl px-6 lg:px-12">
         <Link
           href="/"
@@ -20,7 +20,7 @@ export default function PrivacyPolicy() {
           Torna alla Home
         </Link>
 
-        <h1 className="mb-4 text-3xl font-light tracking-wide text-urban-shadow dark:text-light-text sm:text-4xl">
+        <h1 className="mb-4 text-3xl font-light tracking-wide sm:text-4xl" style={{ color: "var(--text-heading)" }}>
           Privacy Policy
         </h1>
         <p className="mb-12 text-sm text-stone">
@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
         </p>
         <div className="h-[1px] mb-12 w-16 bg-champagne" />
 
-        <div className="prose-agency space-y-8 text-sm leading-relaxed text-stone dark:text-light-muted [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:text-lg [&_h2]:font-medium [&_h2]:tracking-wide [&_h2]:text-urban-shadow dark:[&_h2]:text-light-text [&_h3]:mb-2 [&_h3]:mt-6 [&_h3]:text-base [&_h3]:font-medium [&_h3]:text-urban-shadow dark:[&_h3]:text-light-text [&_ul]:ml-4 [&_ul]:list-disc [&_ul]:space-y-1">
+        <div className="prose-agency space-y-8 text-sm leading-relaxed [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:text-lg [&_h2]:font-medium [&_h2]:tracking-wide [&_h3]:mb-2 [&_h3]:mt-6 [&_h3]:text-base [&_h3]:font-medium [&_ul]:ml-4 [&_ul]:list-disc [&_ul]:space-y-1" style={{ color: "var(--text-body)" }}>
           <h2>1. Titolare del Trattamento</h2>
           <p>
             Il Titolare del trattamento dei dati è <strong>The Agency REE</strong>,

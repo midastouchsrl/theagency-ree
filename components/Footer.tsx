@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-urban-shadow dark:bg-dark-base">
+    <footer style={{ backgroundColor: "var(--bg-dark-section)" }}>
       {/* Top gold line */}
       <div className="h-[1px] bg-gradient-to-r from-transparent via-champagne to-transparent opacity-40" />
 

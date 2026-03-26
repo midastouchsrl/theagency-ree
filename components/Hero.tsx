@@ -1,39 +1,42 @@
+"use client";
+
 import Image from "next/image";
+import { useTheme } from "./ThemeProvider";
 
 export default function Hero() {
-  return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-urban-shadow dark:bg-dark-base">
-      {/* Background pittogramma watermark */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-[0.06]">
-        <Image
-          src="/a-gold.png"
-          alt=""
-          width={800}
-          height={800}
-          className="h-[80vh] w-auto object-contain"
-          priority
-          aria-hidden="true"
-        />
-      </div>
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
 
-      {/* Subtle gold pattern overlay */}
+  return (
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
+      {/* Background image */}
+      <Image
+        src="/hero-bg.webp"
+        alt="Appartamento di lusso con vista su Roma"
+        fill
+        className="object-cover"
+        priority
+        quality={90}
+      />
+
+      {/* Overlay - adapts to theme for text readability */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 transition-colors duration-500"
         style={{
-          backgroundImage:
-            "radial-gradient(circle at 1px 1px, #BD9C72 1px, transparent 0)",
-          backgroundSize: "48px 48px",
+          background: isDark
+            ? "linear-gradient(to bottom, rgba(20,20,20,0.75) 0%, rgba(20,20,20,0.85) 50%, rgba(20,20,20,0.92) 100%)"
+            : "linear-gradient(to bottom, rgba(240,236,229,0.7) 0%, rgba(240,236,229,0.82) 50%, rgba(240,236,229,0.92) 100%)",
         }}
       />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center px-6 text-center">
-        {/* Gold line above */}
+        {/* Gold line */}
         <div className="mb-8 h-[1px] w-16 bg-champagne gold-line-animated" />
 
         {/* Logo */}
         <Image
-          src="/logo-light.png"
+          src={isDark ? "/logo-light.png" : "/logo-dark.png"}
           alt="The Agency REE"
           width={280}
           height={96}
@@ -46,8 +49,11 @@ export default function Hero() {
           Real Estate Experts
         </p>
 
-        {/* Main headline */}
-        <h1 className="max-w-3xl text-3xl font-light leading-tight tracking-wide text-warm-white sm:text-4xl md:text-5xl lg:text-6xl">
+        {/* Headline */}
+        <h1
+          className="max-w-3xl text-3xl font-light leading-tight tracking-wide sm:text-4xl md:text-5xl lg:text-6xl"
+          style={{ color: "var(--text-heading)" }}
+        >
           Eccellenza Immobiliare
           <br />
           <span className="text-gold-gradient font-normal">
@@ -56,7 +62,10 @@ export default function Hero() {
         </h1>
 
         {/* Subtitle */}
-        <p className="mx-auto mt-6 max-w-lg text-base font-light leading-relaxed text-stone sm:text-lg">
+        <p
+          className="mx-auto mt-6 max-w-lg text-base font-light leading-relaxed sm:text-lg"
+          style={{ color: "var(--text-body)" }}
+        >
           Soluzioni immobiliari su misura nel cuore di Roma.
           <br className="hidden sm:block" />
           Consulenze e servizi esclusivi.
@@ -66,14 +75,15 @@ export default function Hero() {
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
           <a
             href="#contatti"
-            className="group relative overflow-hidden border border-champagne px-8 py-3.5 text-[13px] font-medium uppercase tracking-[0.2em] text-champagne transition-all duration-500 hover:text-urban-shadow"
+            className="group relative overflow-hidden border border-champagne px-8 py-3.5 text-[13px] font-medium uppercase tracking-[0.2em] text-champagne transition-all duration-500"
           >
             <span className="absolute inset-0 -translate-x-full bg-champagne transition-transform duration-500 group-hover:translate-x-0" />
-            <span className="relative">Contattaci</span>
+            <span className="relative group-hover:text-warm-white">Contattaci</span>
           </a>
           <a
             href="#servizi"
-            className="px-8 py-3.5 text-[13px] font-medium uppercase tracking-[0.2em] text-warm-white/60 transition-colors duration-300 hover:text-champagne"
+            className="px-8 py-3.5 text-[13px] font-medium uppercase tracking-[0.2em] transition-colors duration-300 hover:text-champagne"
+            style={{ color: "var(--text-body)" }}
           >
             I Nostri Servizi
           </a>
@@ -81,12 +91,15 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
         <div
           className="flex flex-col items-center gap-3"
           style={{ animation: "scrollBounce 2s ease-in-out infinite" }}
         >
-          <span className="text-[10px] uppercase tracking-[0.3em] text-stone">
+          <span
+            className="text-[10px] uppercase tracking-[0.3em]"
+            style={{ color: "var(--text-body)" }}
+          >
             Scorri
           </span>
           <div className="h-8 w-[1px] bg-gradient-to-b from-champagne to-transparent" />
@@ -94,7 +107,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom gold line */}
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-champagne to-transparent opacity-40" />
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-champagne to-transparent opacity-40 z-10" />
     </section>
   );
 }
