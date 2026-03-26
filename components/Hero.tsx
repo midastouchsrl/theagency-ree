@@ -19,13 +19,13 @@ export default function Hero() {
         quality={90}
       />
 
-      {/* Overlay - adapts to theme for text readability */}
+      {/* Overlay */}
       <div
         className="absolute inset-0 transition-colors duration-500"
         style={{
           background: isDark
             ? "linear-gradient(to bottom, rgba(20,20,20,0.55) 0%, rgba(20,20,20,0.7) 50%, rgba(20,20,20,0.82) 100%)"
-            : "linear-gradient(to bottom, rgba(252,250,247,0.55) 0%, rgba(252,250,247,0.72) 50%, rgba(252,250,247,0.88) 100%)",
+            : "linear-gradient(to bottom, rgba(255,255,253,0.62) 0%, rgba(255,255,253,0.78) 50%, rgba(255,255,253,0.92) 100%)",
         }}
       />
 
@@ -44,19 +44,25 @@ export default function Hero() {
           priority
         />
 
-        {/* Tagline */}
-        <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.35em] text-champagne">
+        {/* Tagline - darker gold in light mode for contrast */}
+        <p
+          className="mb-4 text-[13px] font-medium uppercase tracking-[0.35em]"
+          style={{ color: isDark ? "#BD9C72" : "#A68B5B" }}
+        >
           Real Estate Experts
         </p>
 
         {/* Headline */}
         <h1
           className="max-w-3xl text-3xl font-light leading-tight tracking-wide sm:text-4xl md:text-5xl lg:text-6xl"
-          style={{ color: "var(--text-heading)" }}
+          style={{ color: isDark ? "#E8E4DD" : "#1E1E1E" }}
         >
           Eccellenza Immobiliare
           <br />
-          <span className="text-gold-gradient font-normal">
+          <span
+            className="font-normal"
+            style={{ color: isDark ? "#BD9C72" : "#9A7E52" }}
+          >
             nel Cuore di Roma
           </span>
         </h1>
@@ -64,7 +70,7 @@ export default function Hero() {
         {/* Subtitle */}
         <p
           className="mx-auto mt-6 max-w-lg text-base font-light leading-relaxed sm:text-lg"
-          style={{ color: "var(--text-body)" }}
+          style={{ color: isDark ? "#8A8480" : "#4A4440" }}
         >
           Soluzioni immobiliari su misura nel cuore di Roma.
           <br className="hidden sm:block" />
@@ -75,7 +81,11 @@ export default function Hero() {
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
           <a
             href="#contatti"
-            className="group relative overflow-hidden border border-champagne px-8 py-3.5 text-[13px] font-medium uppercase tracking-[0.2em] text-champagne transition-all duration-500"
+            className="group relative overflow-hidden px-8 py-3.5 text-[13px] font-medium uppercase tracking-[0.2em] transition-all duration-500"
+            style={{
+              border: isDark ? "1px solid #BD9C72" : "1px solid #9A7E52",
+              color: isDark ? "#BD9C72" : "#9A7E52",
+            }}
           >
             <span className="absolute inset-0 -translate-x-full bg-champagne transition-transform duration-500 group-hover:translate-x-0" />
             <span className="relative group-hover:text-warm-white">Contattaci</span>
@@ -83,7 +93,7 @@ export default function Hero() {
           <a
             href="#servizi"
             className="px-8 py-3.5 text-[13px] font-medium uppercase tracking-[0.2em] transition-colors duration-300 hover:text-champagne"
-            style={{ color: "var(--text-body)" }}
+            style={{ color: isDark ? "#8A8480" : "#5A5450" }}
           >
             I Nostri Servizi
           </a>
@@ -98,7 +108,7 @@ export default function Hero() {
         >
           <span
             className="text-[10px] uppercase tracking-[0.3em]"
-            style={{ color: "var(--text-body)" }}
+            style={{ color: isDark ? "#8A8480" : "#5A5450" }}
           >
             Scorri
           </span>
