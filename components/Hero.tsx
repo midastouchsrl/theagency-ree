@@ -8,7 +8,7 @@ export default function Hero() {
   const isDark = theme === "dark";
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden sm:min-h-screen">
       {/* Background image */}
       <Image
         src="/hero-bg.webp"
