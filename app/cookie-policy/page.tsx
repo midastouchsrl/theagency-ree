@@ -128,9 +128,13 @@ export default function CookiePolicy() {
 
           <h2>5. Titolare del Trattamento</h2>
           <p>
-            <strong>The Agency REE</strong>
+            <strong>Dionisi Stefano</strong> (impresa individuale)
             <br />
-            Via di Villa Emiliani 34, 00197 Roma (RM)
+            Nome commerciale: The Agency REE
+            <br />
+            Sede operativa: Via di Villa Emiliani 34, 00197 Roma (RM)
+            <br />
+            P.IVA: 11245791006
             <br />
             Email:{" "}
             <a href="mailto:info@theagencyree.it" className="text-champagne underline underline-offset-2">

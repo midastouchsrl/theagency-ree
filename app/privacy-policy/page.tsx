@@ -32,10 +32,16 @@ export default function PrivacyPolicy() {
         <div className="prose-agency space-y-8 text-sm leading-relaxed [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:text-lg [&_h2]:font-medium [&_h2]:tracking-wide [&_h3]:mb-2 [&_h3]:mt-6 [&_h3]:text-base [&_h3]:font-medium [&_ul]:ml-4 [&_ul]:list-disc [&_ul]:space-y-1" style={{ color: "var(--text-body)" }}>
           <h2>1. Titolare del Trattamento</h2>
           <p>
-            Il Titolare del trattamento dei dati è <strong>The Agency REE</strong>,
-            con sede legale in Via di Villa Emiliani 34,
-            00197 Roma (RM), Italia.
+            Il Titolare del trattamento dei dati è <strong>Dionisi Stefano</strong>{" "}
+            (impresa individuale), con nome commerciale <strong>The Agency REE</strong>.
           </p>
+          <ul>
+            <li>Sede legale: Via Fano 3, 00054 Fiumicino (RM), Fraz. Fregene</li>
+            <li>Sede operativa: Via di Villa Emiliani 34, 00197 Roma (RM)</li>
+            <li>P.IVA: 11245791006</li>
+            <li>REA: RM - 1289409</li>
+            <li>PEC: dnssfn75r21h501y@impresa.italia.it</li>
+          </ul>
           <p>
             Email: <a href="mailto:info@theagencyree.it" className="text-champagne underline underline-offset-2">info@theagencyree.it</a>
             <br />

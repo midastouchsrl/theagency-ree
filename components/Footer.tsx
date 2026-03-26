@@ -131,11 +131,11 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 flex flex-col items-center gap-4 border-t border-warm-white/10 pt-8 md:flex-row md:justify-between">
           <p className="text-xs text-warm-white/30">
-            &copy; {currentYear} The Agency REE - Real Estate Experts. Tutti i
-            diritti riservati.
+            &copy; {currentYear} The Agency REE - Dionisi Stefano | P.IVA
+            11245791006 | REA RM-1289409
           </p>
           <p className="text-xs text-warm-white/30">
-            Membro FIAIP - Federazione Italiana Agenti Immobiliari Professionali
+            Agente Immobiliare iscritto alla CCIAA di Roma
           </p>
         </div>
       </div>
