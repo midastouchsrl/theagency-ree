@@ -57,9 +57,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-sm text-warm-white/50">
               <li>
-                Via Giovanni Paisiello 41
-                <br />
-                Palazzo Busiri Vici, 2° piano
+                Via di Villa Emiliani 34
                 <br />
                 Roma - Parioli
               </li>

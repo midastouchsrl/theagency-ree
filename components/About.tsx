@@ -27,21 +27,20 @@ export default function About() {
           <ScrollReveal delay={1}>
             <div className="flex flex-col justify-center">
               <p className="mb-8 text-xl font-light leading-relaxed text-urban-shadow sm:text-2xl lg:text-3xl">
-                La tua migliore agenzia immobiliare nel{" "}
-                <span className="text-champagne">cuore dei Parioli</span>
+                Assistenza immobiliare{" "}
+                <span className="text-champagne">d&apos;eccellenza</span>
               </p>
               <p className="mb-6 text-base leading-relaxed text-stone">
-                THE AGENCY REE si trova nel cuore di Parioli, in Via Giovanni
-                Paisiello 41, Palazzo Busiri Vici, in un comodo ed elegante
-                appartamento posto al secondo piano. Siamo perfettamente inseriti
-                nel mercato immobiliare di Roma grazie alla lunga esperienza del
-                socio fondatore, consigliere da anni del Consiglio Provinciale di
-                FIAIP Roma.
+                Con sede nel cuore di Roma, THE AGENCY REE mette al servizio dei
+                propri clienti esperienza e professionalità per un&apos;assistenza
+                immobiliare d&apos;eccellenza. Accompagniamo ogni cliente con
+                dedizione in tutte le fasi della trattativa, fino alla piena
+                soddisfazione.
               </p>
               <p className="text-base leading-relaxed text-stone">
-                Il nostro staff è formato da abili professionisti, affidabili e
-                competenti, che ti seguiranno fino alla conclusione della pratica
-                con dedizione e trasparenza.
+                Siamo specializzati in compravendite, locazioni, permute e
+                valutazioni di mercato, trattando immobili residenziali e
+                commerciali: appartamenti, ville, negozi e attività.
               </p>
             </div>
           </ScrollReveal>
@@ -55,21 +54,20 @@ export default function About() {
                   Cosa Ci Rende Unici
                 </p>
                 <p className="text-lg font-light leading-relaxed text-urban-shadow">
-                  Il nostro team è composto da{" "}
-                  <span className="font-medium text-champagne">sole donne</span>:
-                  una squadra esperta e preparata il cui unico obiettivo è
-                  accompagnare il cliente verso la realizzazione di un progetto di
-                  felicità, serenità e trasparenza nella compravendita.
+                  Acquistare o vendere casa è uno dei momenti più significativi
+                  della vita. Ne siamo profondamente consapevoli: per questo
+                  offriamo un servizio fondato su{" "}
+                  <span className="font-medium text-champagne">
+                    competenza, trasparenza e assistenza personalizzata
+                  </span>
+                  , garantendo un&apos;esperienza affidabile e su misura.
                 </p>
               </div>
 
               <p className="mb-8 text-base leading-relaxed text-stone">
-                Molti sono i momenti importanti della vita, tra questi rientra
-                senza dubbio l&apos;acquisto o la vendita di una casa. Consapevoli
-                dell&apos;importanza che tale situazione riveste, vogliamo far
-                sentire il cliente tutelato e soddisfatto, mettendo a disposizione
-                la nostra vasta esperienza, competenza e trasparenza nel settore
-                immobiliare.
+                Offriamo inoltre servizi di consulenza tecnica, notarile e
+                finanziaria, oltre a supporto post-vendita, collaborando con
+                professionisti qualificati per valorizzare al meglio ogni immobile.
               </p>
 
               {/* Specializations */}

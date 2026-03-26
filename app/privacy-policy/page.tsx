@@ -33,8 +33,8 @@ export default function PrivacyPolicy() {
           <h2>1. Titolare del Trattamento</h2>
           <p>
             Il Titolare del trattamento dei dati è <strong>The Agency REE</strong>,
-            con sede legale in Via Giovanni Paisiello 41, Palazzo Busiri Vici,
-            00198 Roma (RM), Italia.
+            con sede legale in Via di Villa Emiliani 34,
+            00197 Roma (RM), Italia.
           </p>
           <p>
             Email: <a href="mailto:info@theagencyree.it" className="text-champagne underline underline-offset-2">info@theagencyree.it</a>

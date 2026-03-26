@@ -168,11 +168,9 @@ export default function ContactSection() {
                     Sede
                   </p>
                   <p className="text-base leading-relaxed text-urban-shadow">
-                    Via Giovanni Paisiello 41
+                    Via di Villa Emiliani 34
                     <br />
-                    Palazzo Busiri Vici, 2° piano
-                    <br />
-                    Roma - Zona Parioli
+                    Roma - Parioli
                   </p>
                 </div>
 
@@ -235,7 +233,7 @@ export default function ContactSection() {
               {/* Map embed placeholder */}
               <div className="mt-10 overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.1!2d12.4752!3d41.9284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f8e5e7e7b7%3A0x0!2sVia+Giovanni+Paisiello+41%2C+Roma!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.1!2d12.4752!3d41.9284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f8e5e7e7b7%3A0x0!2sVia+di+Villa+Emiliani+34%2C+Roma!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
                   width="100%"
                   height="220"
                   style={{ border: 0, filter: "grayscale(0.3) sepia(0.15)" }}

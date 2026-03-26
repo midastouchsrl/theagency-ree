@@ -130,7 +130,7 @@ export default function CookiePolicy() {
           <p>
             <strong>The Agency REE</strong>
             <br />
-            Via Giovanni Paisiello 41, Palazzo Busiri Vici, 00198 Roma (RM)
+            Via di Villa Emiliani 34, 00197 Roma (RM)
             <br />
             Email:{" "}
             <a href="mailto:info@theagencyree.it" className="text-champagne underline underline-offset-2">

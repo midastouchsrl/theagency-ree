@@ -57,9 +57,9 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className="mx-auto mt-6 max-w-lg text-base font-light leading-relaxed text-stone sm:text-lg">
-          Soluzioni immobiliari su misura nel quartiere Parioli.
+          Soluzioni immobiliari su misura nel cuore di Roma.
           <br className="hidden sm:block" />
-          Consulenze e servizi esclusivi dal nostro team di esperte.
+          Consulenze e servizi esclusivi.
         </p>
 
         {/* CTA */}
