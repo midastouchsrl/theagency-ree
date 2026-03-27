@@ -34,23 +34,15 @@ export default function Hero() {
         {/* Gold line */}
         <div className="mb-8 h-[1px] w-16 bg-champagne gold-line-animated" />
 
-        {/* Logo */}
+        {/* Logo - centered/vertical version */}
         <Image
-          src={isDark ? "/logo-light.png" : "/logo-dark.png"}
+          src={isDark ? "/Logo hero chiaro.png" : "/logo.png"}
           alt="The Agency REE"
-          width={280}
-          height={96}
-          className="mb-8 h-16 w-auto object-contain sm:h-20 md:h-24"
+          width={240}
+          height={200}
+          className="mb-8 h-28 w-auto object-contain sm:h-36 md:h-44"
           priority
         />
-
-        {/* Tagline - darker gold in light mode for contrast */}
-        <p
-          className="mb-4 text-[13px] font-medium uppercase tracking-[0.35em]"
-          style={{ color: isDark ? "#BD9C72" : "#A68B5B" }}
-        >
-          Real Estate Experts
-        </p>
 
         {/* Headline */}
         <h1
